@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahadev Jangam | Portfolio</title>
+  <meta name="description" content="Portfolio of Mahadev Giramallayya Jangam – Full Stack Developer, ECE undergrad & robotics enthusiast." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style>
+    :root { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Extra Mobile Queries */
+    @media (max-width: 640px) {
+      nav ul { flex-direction: column; gap: 1rem; }
+      #home h1 { font-size: 2rem; }
+      #home p { font-size: 1rem; }
+      #home .flex.gap-4 { flex-direction: column; }
+      #three-canvas { width: 250px !important; height: 250px !important; }
+      #certifications ul { display: flex; flex-direction: column; gap: 1rem; }
+      #contact form { width: 100%; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+  <!-- Navbar -->
+  <header class="bg-gradient-to-r from-green-500 to-blue-600 dark:from-green-800 dark:to-blue-900 text-white sticky top-0 z-50 shadow">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6">
+      <a href="#home" class="flex items-center gap-2">
+        <div class="h-9 w-9 rounded-2xl bg-white text-green-600 grid place-items-center font-bold shadow-md">MJ</div>
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-6 font-medium text-sm">
+          <li><a class="hover:underline" href="#about">About</a></li>
+          <li><a class="hover:underline" href="#skills">Skills</a></li>
+          <li><a class="hover:underline" href="#projects">Projects</a></li>
+          <li><a class="hover:underline" href="#certifications">Certifications</a></li>
+          <li><a class="hover:underline" href="#education">Education</a></li>
+          <li><a class="hover:underline" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="ml-4 px-3 py-1 rounded-lg border border-white/40 text-sm hover:bg-white hover:text-green-700 transition">☀️</button>
+    </div>
+  </header>
+
+  <!-- Hero + 3D -->
+  <section id="home" class="relative text-center py-24 md:py-28 bg-gradient-to-r from-green-500 to-blue-600 dark:from-green-900 dark:to-blue-950 text-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Hi, I'm Mahadev 👋</h1>
+      <p class="mt-4 text-lg md:text-xl opacity-95">Full Stack Developer · ECE Student · Robotics Enthusiast</p>
+      <div class="mt-6 flex justify-center gap-4 flex-wrap">
+        <a href="mailto:mahadevjangam8221@gmail.com" class="bg-white text-green-700 px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition">Hire Me</a>
+        <a href="https://github.com/mahadev-8221" target="_blank" class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-700 transition">GitHub</a>
+        <a href="https://www.linkedin.com/in/mahadev-jangam-a73758268" target="_blank" class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-green-700 transition">LinkedIn</a>
+      </div>
+    </div>
+    <div class="mt-12 flex justify-center">
+      <canvas id="three-canvas" class="w-[320px] h-[320px] md:w-[400px] md:h-[400px]"></canvas>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-green-600 dark:text-green-400">About Me</h2>
+    <p class="mt-4 text-gray-700 dark:text-gray-300">I am a passionate Full Stack Developer and Electronics & Communication Engineering student with a strong foundation in web technologies, robotics, and embedded systems. I love building innovative applications that merge hardware with software to solve real-world problems.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-green-600 dark:text-green-400">Skills</h2>
+      <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">HTML / CSS / JS</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">React.js / Tailwind</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">Node.js / Express</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">MongoDB / SQL</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">C / C++</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">Python</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">Embedded C</div>
+        <div class="p-4 bg-white dark:bg-gray-900 shadow rounded-xl text-center">Verilog / VHDL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-green-600 dark:text-green-400">Projects</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-8">
+      <div class="p-6 bg-white dark:bg-gray-900 shadow rounded-2xl">
+        <h3 class="text-xl font-semibold">LeetMetric</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">A web app to track LeetCode problem-solving progress with a responsive and clean UI.</p>
+        <div class="mt-4 flex gap-4">
+          <a href="https://github.com/mahadev-8221/Leetcode-matric" target="_blank" class="text-green-600 dark:text-green-400 hover:underline">Source Code</a>
+          <a href="https://mahadevjangam.vercel.app" target="_blank" class="text-green-600 dark:text-green-400 hover:underline">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="bg-gray-100 dark:bg-gray-800 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-green-600 dark:text-green-400">Certifications</h2>
+      <ul class="mt-10 grid md:grid-cols-2 gap-6">
+        <li class="p-4 bg-white dark:bg-gray-900 rounded-xl shadow"><a href="https://www.udemy.com/certificate/UC-938fc75b-7b71-4815-8d67-3ce970c514d3/" target="_blank">Web Design Course</a></li>
+        <li class="p-4 bg-white dark:bg-gray-900 rounded-xl shadow"><a href="https://www.udemy.com/certificate/UC-d757b4be-6bb3-42fd-a98f-388e93a55070/" target="_blank">Mastering Web Design</a></li>
+        <li class="p-4 bg-white dark:bg-gray-900 rounded-xl shadow"><a href="https://www.udemy.com/certificate/UC-95b55f9d-d302-4f33-b2fd-7b170110501b/" target="_blank">JavaScript Mastery</a></li>
+        <li class="p-4 bg-white dark:bg-gray-900 rounded-xl shadow"><a href="https://www.udemy.com/certificate/UC-bffe673b-ca56-4650-a98b-c04f118c7cf0/" target="_blank">Node.js Practical Project</a></li>
+        <li class="p-4 bg-white dark:bg-gray-900 rounded-xl shadow"><a href="https://www.udemy.com/certificate/UC-be2713ea-621e-48b2-95c7-fc31c1323b89/" target="_blank">Windows Command Mastery</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-green-600 dark:text-green-400">Education</h2>
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white dark:bg-gray-900 shadow rounded-xl"><h3 class="font-semibold">B.E. Electronics & Communication Engineering (2022–2026)</h3><p>KLE College of Engineering & Technology, Chikodi</p></div>
+      <div class="p-6 bg-white dark:bg-gray-900 shadow rounded-xl"><h3 class="font-semibold">12th Standard (2020–2022)</h3><p>Government PU College, Majalatti</p></div>
+      <div class="p-6 bg-white dark:bg-gray-900 shadow rounded-xl md:col-span-2"><h3 class="font-semibold">10th Standard (2019–2020)</h3><p>Pragati High School, Harugeri</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-green-600 dark:text-green-400">Contact</h2>
+    <p class="mt-4">Reach out for collaborations, internships, or project opportunities.</p>
+    <form id="commentForm" class="mt-6 space-y-4 max-w-xl" action="https://formspree.io/f/mjkevqao" method="POST">
+      <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg border dark:bg-gray-900" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg border dark:bg-gray-900" required>
+      <textarea name="message" rows="4" placeholder="Your Comment" class="w-full px-4 py-2 rounded-lg border dark:bg-gray-900" required></textarea>
+      <button type="submit" class="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700">Submit</button>
+    </form>
+    <div id="commentResult" class="mt-4 text-sm"></div>
+  </section>
+
+  <footer class="bg-green-600 dark:bg-green-800 text-white text-center py-6">
+    <p>Copyright © 2025 · All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Theme Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      themeBtn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    });
+
+    // Comment Result
+    const form = document.getElementById('commentForm');
+    const result = document.getElementById('commentResult');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const resp = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        if (resp.ok) {
+          result.textContent = "✅ Thanks! Your comment was sent.";
+          form.reset();
+        } else { result.textContent = "❌ Error sending comment."; }
+      } catch { result.textContent = "⚠️ Network error."; }
+    });
+
+    // === 3D Animation ===
+    const canvas = document.getElementById("three-canvas");
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+
+    const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambient);
+    const point = new THREE.PointLight(0xffffff, 0.8);
+    point.position.set(5, 5, 5);
+    scene.add(point);
+
+    const cube = new THREE.Mesh(new THREE.BoxGeometry(), new THREE.MeshStandardMaterial({ color: 0x4ade80 }));
+    cube.position.x = -2; scene.add(cube);
+
+    const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.7, 32, 32), new THREE.MeshStandardMaterial({ color: 0x3b82f6 }));
+    sphere.position.x = 2; scene.add(sphere);
+
+    const cylinder = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.6, 1.5, 32), new THREE.MeshStandardMaterial({ color: 0xfacc15 }));
+    cylinder.position.y = -2; scene.add(cylinder);
+
+    camera.position.z = 6;
+    function animate() {
+      requestAnimationFrame(animate);
+      cube.rotation.x += 0.01; cube.rotation.y += 0.01;
+      sphere.rotation.y += 0.01;
+      cylinder.rotation.x += 0.01;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener('resize', () => {
+      renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+    });
+  </script>
+</body>
+</html>
